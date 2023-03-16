@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="src/css_dir/main.css">
+  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="fixed-width">
+      <header class="header">
+        <h1 class="header__title">Rock<br>Paper<br>Scissors</h1>
+        <div class="header__score">
+          <p class="header__score__title">SCORE</p>
+          <div id="score" class="header__score__count">
+            0
+            <!-- display score -->
+          </div>
+        </div>
+      </header>
+      <!-- step 1 -->
+      <main id="stepOne" class="playground">
+        <div id="paper" class="paper__small-circle" data-play="paper">
+          <img src="src/images/icon-paper.svg" alt="icon-paper" data-play="paper">
+        </div>
+        <div id="scissors" class="scissors__small-circle" data-play="scissors">
+          <img src="src/images/icon-scissors.svg" alt="icon-scissors" data-play="scissors">
+        </div>
+        <div id="rock" class="rock__small-circle" data-play="rock">
+          <img src="src/images/icon-rock.svg" alt="icon-rock" data-play="rock">
+        </div>
+      </main>
+      <!-- step 2 -->
+      <main id="stepTwo" class="playground-picked d-none">
+        <div class="playground-picked__box">
+          <h2>YOU PICKED</h2>
+          <div id="user-throw">
+            <!-- display user throw -->
+          </div>
+        </div>
+        <div class="playground-picked__box">
+          <h2>THE HOUSE PICKED</h2>
+          <div id="computer-throw">
+            <!-- display computer throw -->
+          </div>
+        </div>
+      </main>
+      <!-- step 3 -->
+      <main id="stepThree" class="playground-result d-none">
+        <div class="playground-result__box">
+          <h2>YOU PICKED</h2>
+          <div id="user-result">
+            <!-- display user result -->
+          </div>
+        </div>
+        <div class="playground-result__box">
+          <div id="result-title" class="playground-result__box__title">
+            <!-- display result -->
+          </div>
+          <button id="playAgain-btn" class="playground-result__box__btn">PLAY AGAIN</button>
+        </div>
+        <div class="playground-result__box">
+          <h2>THE HOUSE PICKED</h2>
+          <div id="computer-result">
+            <!-- display computer result -->
+          </div>
+        </div>
+      </main>
+      <div class="rule-box d-none">
+        <header>
+          <h2>RULES</h2>
+          <button id="close-btn">x</button>
+        </header>
+        <div class="rule-box__img">
+          <img src="src/images/image-rules.svg" alt="">
+        </div>
+      </div>
+      <footer class="footer">
+        <button id="rule-btn" class="footer__btn">RULES</button>
+      </footer>
+    </div>
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+  <script src="src/js/main.js"></script>
+</body>
+
+</html>

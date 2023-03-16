@@ -1,0 +1,136 @@
+@import '_variable';
+@import '_basis';
+
+/* container */
+.container {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to right, $background , $background_dark);
+}
+
+.fixed-width {
+    height: 100%;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+    @include d-flex(column, space-between, center);
+}
+
+/* header */
+.header {
+    @include d-flex(row, space-between, center);
+    padding: 10px 20px;
+    width: 700px;
+    border: 4px solid $header-outline;
+    border-radius: 20px;
+    &__title{
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 1.8rem;
+    }
+    &__score{
+        padding: 10px 40px;
+        background-color: $white;
+        border-radius: 10px;
+        text-align: center;
+        &__title{
+            color:$score-text;
+            letter-spacing: 2px;
+        }
+        &__count{
+            color: $dark-text;
+            font-size: 48px;
+            font-weight: 700;
+        }
+    }
+}
+
+/* playground */
+.playground {
+    width: 260px;
+    height: 225px;
+    background-image: url("/src/images/bg-triangle.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    position: relative;
+}
+
+/* playground-picked */
+.playground-picked{
+    @include d-flex(row, space-between, center);
+    width: 700px;
+    height: 350px;
+    &__box{
+        @include d-flex(column, space-between, center);
+        width: 300px;
+        height: 100%;
+         >h2{
+            margin-bottom: 40px;
+        }
+    }
+}
+
+/* playground-result */
+.playground-result{
+    width: 800px;
+    @include d-flex(row, space-between, center);
+    &__box{
+        @include d-flex(column, center, center);
+        >h2 {
+                margin-bottom: 40px;
+            }
+        &__title{
+            font-size: 52px;
+            font-weight: 700;
+        }    
+        &__btn{
+            margin-top: 20px;
+            padding: 10px 40px;
+            color: $dark-text;
+            background-color: $white;
+            border-radius: 8px;
+            font-size: 16px;
+            letter-spacing: 2px;
+        }    
+    }
+}
+
+/* rule-box */
+.rule-box{
+    @include d-flex(column, center, center);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+    background-color: $white;
+    border-radius: 8px;
+    >header{
+        @include d-flex(row, space-between, center);
+        width: 100%;
+        margin-bottom: 30px;
+        >h2{
+            color: $dark-text;
+        }
+        >button{
+            color: $lightgray;
+            font-size: 24px;
+        }
+    }
+}
+
+/* footer */
+.footer {
+    align-self: flex-end;
+    &__btn{
+        padding: 10px 20px;
+        border: 2px solid $white;
+        border-radius: 8px;
+        letter-spacing: 2px;
+    }
+}
+
+.d-none {
+    display: none;
+}

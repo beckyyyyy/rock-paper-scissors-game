@@ -1,0 +1,67 @@
+@import '_basis';
+@import '_variable';
+/* 剪刀石頭布icon */
+
+// small-circle
+.paper__small-circle{
+    @extend %circle__small;
+    @extend %paper;
+    position: absolute;
+    left: -50%;
+    top: -50%;
+    transform: translate(calc(50% - 15px), calc(50% - 30px));   
+}
+.scissors__small-circle{
+    position: absolute;
+    right: -50%;
+    top: -50%;
+    transform: translate(calc(-50% + 15px), calc(50% - 30px));        
+    @extend %circle__small;
+    @extend %scissors;
+}
+.rock__small-circle{
+    @extend %circle__small;
+    @extend %rock;
+    position: absolute;
+    bottom: -50%;
+    left: 50%;
+    transform: translate(-50%, calc(-50% + 30px));
+}
+
+// big-circle
+.paper__big-circle{
+    @extend %circle__big;
+    @extend %paper;
+}
+.scissors__big-circle{
+    @extend %circle__big;
+    @extend %scissors;    
+}
+.rock__big-circle{
+    @extend %circle__big;
+    @extend %rock;    
+}
+
+// win
+.paper__win{
+    @extend %circle__big;
+    border-color: $paper;
+    box-shadow: 0px 8px $paper_dark , 0 8px $lightgray inset,0px 0px 0px 50px rgba($color: $white, $alpha: 0.035),
+        0px 0px 0px 100px rgba($color: $white, $alpha: 0.035),
+            0px 0px 0px 150px rgba($color: $white, $alpha: 0.035);
+}
+.scissors__win {
+    @extend %circle__big;
+    border-color: $scissors;
+    box-shadow: 0px 8px $scissors_dark , 0 8px $lightgray inset, 0px 0px 0px 50px rgba($color: $white, $alpha: 0.035),
+            0px 0px 0px 100px rgba($color: $white, $alpha: 0.035),
+            0px 0px 0px 150px rgba($color: $white, $alpha: 0.035);
+}
+
+.rock__win {
+    @extend %circle__big;
+    border-color: $rock;
+    box-shadow: 0px 8px $rock_dark , 0 8px $lightgray inset, 0px 0px 0px 50px rgba($color: $white, $alpha: 0.035),
+            0px 0px 0px 100px rgba($color: $white, $alpha: 0.035),
+            0px 0px 0px 150px rgba($color: $white, $alpha: 0.035);
+}
