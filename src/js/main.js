@@ -38,9 +38,12 @@ const displayPlayground = () => {
   } else if (currentState === "ComputerPlay") {
     setTimeout(displayComputerThrow, 2000)
   } else {
-    stepThree.classList.remove("d-none")
-    stepTwo.classList.add("d-none")
-    displayGameResult()
+    stepTwo.classList.add("zoomerOut")
+    setTimeout(() => {
+      stepThree.classList.remove("d-none")
+      stepTwo.classList.add("d-none")
+      displayGameResult()
+    }, 1000)
   }
 }
 
@@ -65,7 +68,7 @@ const throwPunch = (event) => {
 // 顯示玩家所選的拳，進入GAME_STATE = "ComputerPlay"
 const displayUserThrow = () => {
   userThrow.innerHTML = `
-      <div class="${userPlay}__big-circle">
+      <div class="${userPlay}__big-circle zoomer">
         <img src="src/images/icon-${userPlay}.svg" alt="icon-${userPlay}">
       </div>
     `
@@ -89,7 +92,7 @@ const displayComputerThrow = () => {
     </div>
   `
   currentState = GAME_STATE.GameEnd
-  setTimeout(displayPlayground, 1500)
+  setTimeout(displayPlayground, 1000)
 }
 
 // 判斷誰是贏家
@@ -146,6 +149,7 @@ const handlePlayAgainClick = () => {
 
 // 開啟/關閉說明規則視窗
 const displayRule = () => {
+  ruleBox.classList.add("fadeIn")
   ruleBox.classList.remove("d-none")
 }
 const closeRule = () => {

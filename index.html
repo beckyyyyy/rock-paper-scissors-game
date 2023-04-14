@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="src/css_dir/wickedcss.min.css">
   <link rel="stylesheet" href="src/css_dir/main.css">
   <title>Frontend Mentor | Rock, Paper, Scissors</title>
 
@@ -60,6 +61,16 @@
         <div class="playground-picked__box">
           <h2>THE HOUSE PICKED</h2>
           <div id="computer-throw">
+            <!-- 三種拳輪流切換動畫 -->
+            <div class="paper__big-circle">
+              <img src="src/images/icon-paper.svg" alt="icon-paper">
+            </div>
+            <div class="paper__big-circle">
+              <img src="src/images/icon-paper.svg" alt="icon-paper">
+            </div>
+            <div class="paper__big-circle">
+              <img src="src/images/icon-paper.svg" alt="icon-paper">
+            </div>
             <!-- display computer throw -->
           </div>
         </div>
@@ -73,7 +84,7 @@
           </div>
         </div>
         <div class="playground-result__box">
-          <div id="result-title" class="playground-result__box__title">
+          <div id="result-title" class="playground-result__box__title bounceIn">
             <!-- display result -->
           </div>
           <button id="playAgain-btn" class="playground-result__box__btn">PLAY AGAIN</button>
