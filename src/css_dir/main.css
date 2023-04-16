@@ -36,7 +36,11 @@ button {
   cursor: pointer;
 }
 
-.rock__win, .scissors__win, .paper__win, .rock__big-circle, .scissors__big-circle, .paper__big-circle, .rock__small-circle, .scissors__small-circle, .paper__small-circle {
+a {
+  text-decoration: none;
+}
+
+.rock__win, .scissors__win, .paper__win, .big-circle, .rock__big-circle, .scissors__big-circle, .paper__big-circle, .rock__small-circle, .scissors__small-circle, .paper__small-circle {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -51,7 +55,7 @@ button {
   padding: 30px;
   border: 20px solid;
 }
-.rock__win, .scissors__win, .paper__win, .rock__big-circle, .scissors__big-circle, .paper__big-circle {
+.rock__win, .scissors__win, .paper__win, .big-circle, .rock__big-circle, .scissors__big-circle, .paper__big-circle {
   width: 250px;
   height: 250px;
   padding: 60px;
@@ -232,6 +236,39 @@ button {
   display: none;
 }
 
+/* attribution */
+.attribution {
+  text-align: center;
+  font-size: 11px;
+  color: hsl(214, 47%, 23%);
+}
+.attribution > a {
+  color: hsl(229, 64%, 46%);
+}
+
+.computer-animate {
+  background-repeat: no-repeat;
+  background-position: center;
+  animation: computerPlaying 0.5s infinite step-end;
+}
+
+@keyframes computerPlaying {
+  0% {
+    background-image: url("../images/icon-paper.svg");
+    border-color: hsl(230, 89%, 65%);
+    box-shadow: 0px 8px hsl(230, 89%, 62%), 0 8px hsl(0, 0%, 83%) inset;
+  }
+  33% {
+    background-image: url("../images/icon-rock.svg");
+    border-color: hsl(349, 70%, 56%);
+    box-shadow: 0px 8px hsl(349, 71%, 52%), 0 8px hsl(0, 0%, 83%) inset;
+  }
+  66% {
+    background-image: url("../images/icon-scissors.svg");
+    border-color: hsl(40, 84%, 53%);
+    box-shadow: 0px 8px hsl(39, 89%, 49%), 0 8px hsl(0, 0%, 83%) inset;
+  }
+}
 /* reset css */
 body {
   margin: 0;
@@ -269,7 +306,11 @@ button {
   cursor: pointer;
 }
 
-.rock__small-circle, .scissors__small-circle, .paper__small-circle, .rock__win, .scissors__win, .paper__win, .rock__big-circle, .scissors__big-circle, .paper__big-circle {
+a {
+  text-decoration: none;
+}
+
+.rock__small-circle, .scissors__small-circle, .paper__small-circle, .rock__win, .scissors__win, .paper__win, .big-circle, .rock__big-circle, .scissors__big-circle, .paper__big-circle {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -284,7 +325,7 @@ button {
   padding: 30px;
   border: 20px solid;
 }
-.rock__win, .scissors__win, .paper__win, .rock__big-circle, .scissors__big-circle, .paper__big-circle {
+.rock__win, .scissors__win, .paper__win, .big-circle, .rock__big-circle, .scissors__big-circle, .paper__big-circle {
   width: 250px;
   height: 250px;
   padding: 60px;

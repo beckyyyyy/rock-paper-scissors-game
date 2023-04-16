@@ -142,8 +142,9 @@ const displayGameResult = () => {
 // 點擊play again按鈕，回到GameStart
 const handlePlayAgainClick = () => {
   currentState = GAME_STATE.GameStart
-  computerThrow.innerHTML = ""
+  computerThrow.innerHTML = `<div class="big-circle computer-animate"></div>`
   winner = ""
+  stepTwo.classList.remove("zoomerOut")
   displayPlayground()
 }
 

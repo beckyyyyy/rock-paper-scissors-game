@@ -21,7 +21,7 @@ Desktop 💻
 
 ### Links
 
-- Live Site URL: [Click me !](https://beckyyyyy.github.io/)
+- Live Site URL: [Click me !](https://beckyyyyy.github.io/rock-paper-scissors-game/)
 
 ## My process
 
