@@ -21,7 +21,7 @@ button {
   margin: 0px;
   padding: 0px;
   font-family: "Barlow Semi Condensed", sans-serif;
-  color: hsl(0deg, 0%, 96%);
+  color: hsl(0, 0%, 96%);
 }
 
 img {
@@ -36,12 +36,16 @@ button {
   cursor: pointer;
 }
 
-.rock__win, .scissors__win, .paper__win, .rock__big-circle, .scissors__big-circle, .paper__big-circle, .rock__small-circle, .scissors__small-circle, .paper__small-circle {
+a {
+  text-decoration: none;
+}
+
+.rock__win, .scissors__win, .paper__win, .big-circle, .rock__big-circle, .scissors__big-circle, .paper__big-circle, .rock__small-circle, .scissors__small-circle, .paper__small-circle {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: hsl(0deg, 0%, 96%);
+  background-color: hsl(0, 0%, 96%);
   border-radius: 100%;
   cursor: pointer;
 }
@@ -51,7 +55,7 @@ button {
   padding: 30px;
   border: 20px solid;
 }
-.rock__win, .scissors__win, .paper__win, .rock__big-circle, .scissors__big-circle, .paper__big-circle {
+.rock__win, .scissors__win, .paper__win, .big-circle, .rock__big-circle, .scissors__big-circle, .paper__big-circle {
   width: 250px;
   height: 250px;
   padding: 60px;
@@ -59,25 +63,25 @@ button {
 }
 
 .paper__big-circle, .paper__small-circle {
-  border-color: hsl(230deg, 89%, 65%);
-  box-shadow: 0px 8px hsl(230deg, 89%, 62%), 0 8px hsl(0deg, 0%, 83%) inset;
+  border-color: hsl(230, 89%, 65%);
+  box-shadow: 0px 8px hsl(230, 89%, 62%), 0 8px hsl(0, 0%, 83%) inset;
 }
 
 .scissors__big-circle, .scissors__small-circle {
-  border-color: hsl(40deg, 84%, 53%);
-  box-shadow: 0px 8px hsl(39deg, 89%, 49%), 0 8px hsl(0deg, 0%, 83%) inset;
+  border-color: hsl(40, 84%, 53%);
+  box-shadow: 0px 8px hsl(39, 89%, 49%), 0 8px hsl(0, 0%, 83%) inset;
 }
 
 .rock__big-circle, .rock__small-circle {
-  border-color: hsl(349deg, 70%, 56%);
-  box-shadow: 0px 8px hsl(349deg, 71%, 52%), 0 8px hsl(0deg, 0%, 83%) inset;
+  border-color: hsl(349, 70%, 56%);
+  box-shadow: 0px 8px hsl(349, 71%, 52%), 0 8px hsl(0, 0%, 83%) inset;
 }
 
 /* container */
 .container {
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(to right, hsl(214deg, 47%, 23%), hsl(237deg, 49%, 15%));
+  background: linear-gradient(to right, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
 }
 
 .fixed-width {
@@ -99,7 +103,7 @@ button {
   align-items: center;
   padding: 10px 20px;
   width: 700px;
-  border: 4px solid hsl(217deg, 16%, 45%);
+  border: 4px solid hsl(217, 16%, 45%);
   border-radius: 20px;
 }
 .header__title {
@@ -109,16 +113,16 @@ button {
 }
 .header__score {
   padding: 10px 40px;
-  background-color: hsl(0deg, 0%, 96%);
+  background-color: hsl(0, 0%, 96%);
   border-radius: 10px;
   text-align: center;
 }
 .header__score__title {
-  color: hsl(229deg, 64%, 46%);
+  color: hsl(229, 64%, 46%);
   letter-spacing: 2px;
 }
 .header__score__count {
-  color: hsl(229deg, 25%, 31%);
+  color: hsl(229, 25%, 31%);
   font-size: 48px;
   font-weight: 700;
 }
@@ -179,8 +183,8 @@ button {
 .playground-result__box__btn {
   margin-top: 20px;
   padding: 10px 40px;
-  color: hsl(229deg, 25%, 31%);
-  background-color: hsl(0deg, 0%, 96%);
+  color: hsl(229, 25%, 31%);
+  background-color: hsl(0, 0%, 96%);
   border-radius: 8px;
   font-size: 16px;
   letter-spacing: 2px;
@@ -197,7 +201,7 @@ button {
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 30px;
-  background-color: hsl(0deg, 0%, 96%);
+  background-color: hsl(0, 0%, 96%);
   border-radius: 8px;
 }
 .rule-box > header {
@@ -209,10 +213,10 @@ button {
   margin-bottom: 30px;
 }
 .rule-box > header > h2 {
-  color: hsl(229deg, 25%, 31%);
+  color: hsl(229, 25%, 31%);
 }
 .rule-box > header > button {
-  color: hsl(0deg, 0%, 83%);
+  color: hsl(0, 0%, 83%);
   font-size: 24px;
 }
 
@@ -222,7 +226,7 @@ button {
 }
 .footer__btn {
   padding: 10px 20px;
-  border: 2px solid hsl(0deg, 0%, 96%);
+  border: 2px solid hsl(0, 0%, 96%);
   border-radius: 8px;
   letter-spacing: 2px;
 }
@@ -231,6 +235,39 @@ button {
   display: none;
 }
 
+/* attribution */
+.attribution {
+  text-align: center;
+  font-size: 11px;
+  color: hsl(214, 47%, 23%);
+}
+.attribution > a {
+  color: hsl(229, 64%, 46%);
+}
+
+.computer-animate {
+  background-repeat: no-repeat;
+  background-position: center;
+  animation: computerPlaying 0.5s infinite step-end;
+}
+
+@keyframes computerPlaying {
+  0% {
+    background-image: url("../images/icon-paper.svg");
+    border-color: hsl(230, 89%, 65%);
+    box-shadow: 0px 8px hsl(230, 89%, 62%), 0 8px hsl(0, 0%, 83%) inset;
+  }
+  33% {
+    background-image: url("../images/icon-rock.svg");
+    border-color: hsl(349, 70%, 56%);
+    box-shadow: 0px 8px hsl(349, 71%, 52%), 0 8px hsl(0, 0%, 83%) inset;
+  }
+  66% {
+    background-image: url("../images/icon-scissors.svg");
+    border-color: hsl(40, 84%, 53%);
+    box-shadow: 0px 8px hsl(39, 89%, 49%), 0 8px hsl(0, 0%, 83%) inset;
+  }
+}
 /* reset css */
 body {
   margin: 0;
@@ -253,7 +290,7 @@ button {
   margin: 0px;
   padding: 0px;
   font-family: "Barlow Semi Condensed", sans-serif;
-  color: hsl(0deg, 0%, 96%);
+  color: hsl(0, 0%, 96%);
 }
 
 img {
@@ -268,12 +305,16 @@ button {
   cursor: pointer;
 }
 
-.rock__small-circle, .scissors__small-circle, .paper__small-circle, .rock__win, .scissors__win, .paper__win, .rock__big-circle, .scissors__big-circle, .paper__big-circle {
+a {
+  text-decoration: none;
+}
+
+.rock__small-circle, .scissors__small-circle, .paper__small-circle, .rock__win, .scissors__win, .paper__win, .big-circle, .rock__big-circle, .scissors__big-circle, .paper__big-circle {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: hsl(0deg, 0%, 96%);
+  background-color: hsl(0, 0%, 96%);
   border-radius: 100%;
   cursor: pointer;
 }
@@ -283,7 +324,7 @@ button {
   padding: 30px;
   border: 20px solid;
 }
-.rock__win, .scissors__win, .paper__win, .rock__big-circle, .scissors__big-circle, .paper__big-circle {
+.rock__win, .scissors__win, .paper__win, .big-circle, .rock__big-circle, .scissors__big-circle, .paper__big-circle {
   width: 250px;
   height: 250px;
   padding: 60px;
@@ -291,18 +332,18 @@ button {
 }
 
 .paper__big-circle, .paper__small-circle {
-  border-color: hsl(230deg, 89%, 65%);
-  box-shadow: 0px 8px hsl(230deg, 89%, 62%), 0 8px hsl(0deg, 0%, 83%) inset;
+  border-color: hsl(230, 89%, 65%);
+  box-shadow: 0px 8px hsl(230, 89%, 62%), 0 8px hsl(0, 0%, 83%) inset;
 }
 
 .scissors__big-circle, .scissors__small-circle {
-  border-color: hsl(40deg, 84%, 53%);
-  box-shadow: 0px 8px hsl(39deg, 89%, 49%), 0 8px hsl(0deg, 0%, 83%) inset;
+  border-color: hsl(40, 84%, 53%);
+  box-shadow: 0px 8px hsl(39, 89%, 49%), 0 8px hsl(0, 0%, 83%) inset;
 }
 
 .rock__big-circle, .rock__small-circle {
-  border-color: hsl(349deg, 70%, 56%);
-  box-shadow: 0px 8px hsl(349deg, 71%, 52%), 0 8px hsl(0deg, 0%, 83%) inset;
+  border-color: hsl(349, 70%, 56%);
+  box-shadow: 0px 8px hsl(349, 71%, 52%), 0 8px hsl(0, 0%, 83%) inset;
 }
 
 /* 剪刀石頭布icon */
@@ -328,18 +369,18 @@ button {
 }
 
 .paper__win {
-  border-color: hsl(230deg, 89%, 65%);
-  box-shadow: 0px 8px hsl(230deg, 89%, 62%), 0 8px hsl(0deg, 0%, 83%) inset, 0px 0px 0px 50px rgba(245, 245, 245, 0.035), 0px 0px 0px 100px rgba(245, 245, 245, 0.035), 0px 0px 0px 150px rgba(245, 245, 245, 0.035);
+  border-color: hsl(230, 89%, 65%);
+  box-shadow: 0px 8px hsl(230, 89%, 62%), 0 8px hsl(0, 0%, 83%) inset, 0px 0px 0px 50px rgba(245, 245, 245, 0.035), 0px 0px 0px 100px rgba(245, 245, 245, 0.035), 0px 0px 0px 150px rgba(245, 245, 245, 0.035);
 }
 
 .scissors__win {
-  border-color: hsl(40deg, 84%, 53%);
-  box-shadow: 0px 8px hsl(39deg, 89%, 49%), 0 8px hsl(0deg, 0%, 83%) inset, 0px 0px 0px 50px rgba(245, 245, 245, 0.035), 0px 0px 0px 100px rgba(245, 245, 245, 0.035), 0px 0px 0px 150px rgba(245, 245, 245, 0.035);
+  border-color: hsl(40, 84%, 53%);
+  box-shadow: 0px 8px hsl(39, 89%, 49%), 0 8px hsl(0, 0%, 83%) inset, 0px 0px 0px 50px rgba(245, 245, 245, 0.035), 0px 0px 0px 100px rgba(245, 245, 245, 0.035), 0px 0px 0px 150px rgba(245, 245, 245, 0.035);
 }
 
 .rock__win {
-  border-color: hsl(349deg, 70%, 56%);
-  box-shadow: 0px 8px hsl(349deg, 71%, 52%), 0 8px hsl(0deg, 0%, 83%) inset, 0px 0px 0px 50px rgba(245, 245, 245, 0.035), 0px 0px 0px 100px rgba(245, 245, 245, 0.035), 0px 0px 0px 150px rgba(245, 245, 245, 0.035);
+  border-color: hsl(349, 70%, 56%);
+  box-shadow: 0px 8px hsl(349, 71%, 52%), 0 8px hsl(0, 0%, 83%) inset, 0px 0px 0px 50px rgba(245, 245, 245, 0.035), 0px 0px 0px 100px rgba(245, 245, 245, 0.035), 0px 0px 0px 150px rgba(245, 245, 245, 0.035);
 }
 
 /*# sourceMappingURL=main.css.map */

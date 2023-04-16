@@ -134,3 +134,36 @@
 .d-none {
     display: none;
 }
+
+/* attribution */
+.attribution{
+    text-align: center;
+    font-size: 11px;
+    color: $background;
+    >a{
+        color: $score-text;
+    }
+}
+
+.computer-animate{
+//    background-image: url("../images/icon-paper.svg");
+   background-repeat: no-repeat;
+   background-position: center;
+   animation: computerPlaying 0.5s infinite step-end;
+}
+
+@keyframes computerPlaying {
+    0%{
+        background-image: url("../images/icon-paper.svg");
+        border-color: $paper;
+        box-shadow: 0px 8px $paper_dark , 0 8px $lightgray inset;
+    }33%{
+        background-image: url("../images/icon-rock.svg");
+        border-color: $rock;
+        box-shadow: 0px 8px $rock_dark, 0 8px $lightgray inset;
+    }66%{
+        background-image: url("../images/icon-scissors.svg");
+        border-color: $scissors;
+        box-shadow: 0px 8px $scissors_dark, 0 8px $lightgray inset;
+    }
+}

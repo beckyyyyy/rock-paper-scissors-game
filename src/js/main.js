@@ -38,9 +38,12 @@ const displayPlayground = () => {
   } else if (currentState === "ComputerPlay") {
     setTimeout(displayComputerThrow, 2000)
   } else {
-    stepThree.classList.remove("d-none")
-    stepTwo.classList.add("d-none")
-    displayGameResult()
+    stepTwo.classList.add("zoomerOut")
+    setTimeout(() => {
+      stepThree.classList.remove("d-none")
+      stepTwo.classList.add("d-none")
+      displayGameResult()
+    }, 1000)
   }
 }
 
@@ -84,7 +87,7 @@ const randomComputerThrow = () => {
 const displayComputerThrow = () => {
   randomComputerThrow()
   computerThrow.innerHTML = `
-    <div class="${computerPlay}__big-circle">
+    <div class="${computerPlay}__big-circle zoomer">
       <img src="src/images/icon-${computerPlay}.svg" alt="icon-${computerPlay}">
     </div>
   `
@@ -139,8 +142,9 @@ const displayGameResult = () => {
 // 點擊play again按鈕，回到GameStart
 const handlePlayAgainClick = () => {
   currentState = GAME_STATE.GameStart
-  computerThrow.innerHTML = ""
+  computerThrow.innerHTML = `<div class="big-circle computer-animate"></div>`
   winner = ""
+  stepTwo.classList.remove("zoomerOut")
   displayPlayground()
 }
 
