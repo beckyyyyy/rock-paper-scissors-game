@@ -68,7 +68,7 @@ const throwPunch = (event) => {
 // 顯示玩家所選的拳，進入GAME_STATE = "ComputerPlay"
 const displayUserThrow = () => {
   userThrow.innerHTML = `
-      <div class="${userPlay}__big-circle">
+      <div class="${userPlay}__big-circle zoomer">
         <img src="src/images/icon-${userPlay}.svg" alt="icon-${userPlay}">
       </div>
     `
@@ -87,12 +87,12 @@ const randomComputerThrow = () => {
 const displayComputerThrow = () => {
   randomComputerThrow()
   computerThrow.innerHTML = `
-    <div class="${computerPlay}__big-circle zoomer">
+    <div class="${computerPlay}__big-circle">
       <img src="src/images/icon-${computerPlay}.svg" alt="icon-${computerPlay}">
     </div>
   `
   currentState = GAME_STATE.GameEnd
-  setTimeout(displayPlayground, 1500)
+  setTimeout(displayPlayground, 1000)
 }
 
 // 判斷誰是贏家
@@ -150,6 +150,7 @@ const handlePlayAgainClick = () => {
 
 // 開啟/關閉說明規則視窗
 const displayRule = () => {
+  ruleBox.classList.add("fadeIn")
   ruleBox.classList.remove("d-none")
 }
 const closeRule = () => {
