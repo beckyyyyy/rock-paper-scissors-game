@@ -38,10 +38,10 @@ const displayPlayground = () => {
   } else if (currentState === "ComputerPlay") {
     setTimeout(displayComputerThrow, 2000)
   } else {
-    stepTwo.classList.add("zoomerOut")
+    stepTwo.classList.add("zoomOut")
     setTimeout(() => {
-      stepThree.classList.remove("d-none")
       stepTwo.classList.add("d-none")
+      stepThree.classList.remove("d-none")
       displayGameResult()
     }, 1000)
   }
@@ -68,7 +68,7 @@ const throwPunch = (event) => {
 // 顯示玩家所選的拳，進入GAME_STATE = "ComputerPlay"
 const displayUserThrow = () => {
   userThrow.innerHTML = `
-      <div class="${userPlay}__big-circle zoomer">
+      <div class="${userPlay}__big-circle zoomIn">
         <img src="src/images/icon-${userPlay}.svg" alt="icon-${userPlay}">
       </div>
     `
@@ -144,7 +144,7 @@ const handlePlayAgainClick = () => {
   currentState = GAME_STATE.GameStart
   computerThrow.innerHTML = `<div class="big-circle computer-animate"></div>`
   winner = ""
-  stepTwo.classList.remove("zoomerOut")
+  stepTwo.classList.remove("zoomOut")
   displayPlayground()
 }
 
